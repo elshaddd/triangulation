@@ -12,8 +12,8 @@ public class CheckTriangulationTest {
     @Test
     public void SimpleTest() throws FileNotFoundException {
         CheckTriangulation checkTriangulation = new CheckTriangulation();
-        var first = GraphFactory.loadGraphFromFile(new File("src/main/resources/checkTriangulation/undirected/graph0.txt"));
-        var second = GraphFactory.loadGraphFromFile(new File("src/main/resources/checkTriangulation/undirected/graph1.txt"));
+        var first = GraphFactory.loadGraphFromFile(new File("src/main/resources/checkTriangulation/undirected/graph0_correct.txt"));
+        var second = GraphFactory.loadGraphFromFile(new File("src/main/resources/checkTriangulation/undirected/graph1_wrong.txt"));
 
         assertThat(checkTriangulation.execute(first)).isTrue();
         assertThat(checkTriangulation.execute(second)).isFalse();
